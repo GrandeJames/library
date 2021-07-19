@@ -1,0 +1,45 @@
+/* Layout */
+:root {
+    --color-primary: rgba(177,104,53,255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: fit-content;
+    margin: 3rem 1rem 1rem 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+table {
+    margin: 1rem 1rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.5rem;
+}
