@@ -1,6 +1,7 @@
 /* Layout */
 :root {
     --color-primary: rgba(177,104,53,255);
+    --border-radius: 5px;
 }
 
 * {
@@ -13,33 +14,50 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5rem 10rem 0 10rem;
 }
 
 header {
     height: fit-content;
-    margin: 3rem 1rem 1rem 1rem;
-    padding: 1rem;
+}
+
+form {
     display: flex;
-    align-items: center;
-    background-color: var(--color-primary);
-    border-radius: 5px;
+    flex-direction: column;
+    margin: 2rem 0 2rem 0;
+    justify-content: space-between;
+    height: 16vh;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 700;
+}
+
+input {
+    height: 2rem;
+    border: 1px solid lightgray;
+    border-radius: var(--border-radius);
+}
+
+.submit-button {
+    width: 7rem;
+    height: 3rem;
+    background-color: wheat;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1rem;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
-table {
-    margin: 1rem 1rem;
-}
-
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-td {
-    padding: 0.5rem;
+th {
+    text-align: left;
 }
