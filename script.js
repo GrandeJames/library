@@ -62,7 +62,12 @@ function displayNewBook(book) {
   const tableData2 = document.createElement("td");
   const tableData3 = document.createElement("td");
   const tableData4 = document.createElement("td");
+  const tableData5 = document.createElement("td");
+
   const statusButton = document.createElement("button");
+  const removeButton = document.createElement("button");
+
+  tableRow.setAttribute("data-index", myLibrary.indexOf(book));
 
   tableData1.textContent = book.title;
   tableData2.textContent = book.author;
@@ -73,16 +78,24 @@ function displayNewBook(book) {
   statusButton.id = book.status ? "read" : "not-read";
   statusButton.textContent = book.status ? "Read" : "Not Read";
 
+  removeButton.type = "button";
+  removeButton.className = "remove-buttons";
+  removeButton.setAttribute("data-index", myLibrary.indexOf(book));
+  removeButton.textContent = "Remove";
+
   tableData4.appendChild(statusButton);
+  tableData5.appendChild(removeButton);
 
   tableRow.appendChild(tableData1);
   tableRow.appendChild(tableData2);
   tableRow.appendChild(tableData3);
   tableRow.appendChild(tableData4);
+  tableRow.appendChild(tableData5);
 
   table.appendChild(tableRow);
 
   addStatusButtonListener(statusButton);
+  addRemoveButtonListener(removeButton);
 }
 
 function addInitialBooks() {
@@ -97,7 +110,28 @@ function displayInitialBooks() {
   myLibrary.forEach((book) => displayNewBook(book));
 }
 
+function removeTableRow(removeButton) {
+  const dataIndexValue = removeButton.getAttribute("data-index");
+  const tableRowAtIndex = document.querySelector(
+    `[data-index="${dataIndexValue}"]`
+  );
+  tableRowAtIndex.remove();
+}
+
+function addInitialRemoveButtonListener() {
+  const removeButtons = document.querySelectorAll(".remove-buttons");
+
+  removeButtons.forEach((removeButton) => {
+    addRemoveButtonListener(removeButton);
+  });
+}
+
+function addRemoveButtonListener(removeButton) {
+  removeButton.addEventListener("click", () => removeTableRow(removeButton));
+}
+
 addStatusButtonsListener();
 addSubmitButtonListener();
 addInitialBooks();
 displayInitialBooks();
+addInitialRemoveButtonListener();

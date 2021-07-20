@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>Library</title>
-    </head>
-    <body>
-        <header>
-            <h1>My Library</h1>
-        </header>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Library</h1>
+    </header>
 
-        <form>
-            <h2>Add New Book</h2>
-            <div class="input-container">
-                <div class="input-section">
-                    <label for="title">Title</label><br>
-                    <input type="text" id="title" name="title">
-                </div>
+    <form>
+      <h2>Add New Book</h2>
+      <div class="input-container">
+        <div class="input-section">
+          <label for="title">Title</label><br />
+          <input type="text" id="title" name="title" />
+        </div>
 
-                <div class="input-section">
-                    <label for="author">Author</label><br>
-                    <input type="text" id="author" name="author">
-                </div>
+        <div class="input-section">
+          <label for="author">Author</label><br />
+          <input type="text" id="author" name="author" />
+        </div>
 
-                <div class="input-section">
-                    <label for="pages">Pages</label><br>
-                    <input type="number" id="pages" name="pages" min="1">
-                </div>
+        <div class="input-section">
+          <label for="pages">Pages</label><br />
+          <input type="number" id="pages" name="pages" min="1" />
+        </div>
 
-                <div class="input-section">
-                    <label for="status">Status</label><br>
-                    <select id="status" name="status">
-                        <option value="read">Read</option>
-                        <option value="not-read">Not Read</option>
-                    </select>
-                </div>
-                
-            </div>
+        <div class="input-section">
+          <label for="status">Status</label><br />
+          <select id="status" name="status">
+            <option value="read">Read</option>
+            <option value="not-read">Not Read</option>
+          </select>
+        </div>
+      </div>
 
-            <input class="submit-button" type="button" value="Add Book">
-        </form>
+      <input class="submit-button" type="button" value="Add Book" />
+    </form>
 
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Status</th>
-            </tr>
-        </table>
-        <script src="script.js"></script>
-    </body>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Status</th>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
 </html>
