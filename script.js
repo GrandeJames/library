@@ -34,7 +34,6 @@ function addSubmitButtonListener() {
         statusInput.value === "read"
       );
 
-      addBookToLibrary(book);
       displayNewBook(book);
     }
   });
@@ -47,11 +46,20 @@ function Book(title, author, pages, status) {
   this.status = status;
 }
 
-function addBookToLibrary(book) {
-  myLibrary.push(book);
-}
-
-let myLibrary = [];
+let myLibrary = [
+  {
+    title: "Harry Potter",
+    author: "J. K. Rowling",
+    pages: 336,
+    status: false,
+  },
+  {
+    title: "The Hobbit",
+    author: "J. R. R. Tolkien",
+    pages: 304,
+    status: true,
+  },
+];
 
 function displayNewBook(book) {
   const table = document.querySelector("table");
@@ -98,14 +106,6 @@ function displayNewBook(book) {
   addRemoveButtonListener(removeButton);
 }
 
-function addInitialBooks() {
-  const book1 = new Book("Harry Potter", "J. K. Rowling", 336, false);
-  const book2 = new Book("The Hobbit", "J. R. R. Tolkien", 304, true);
-
-  addBookToLibrary(book1);
-  addBookToLibrary(book2);
-}
-
 function displayInitialBooks() {
   myLibrary.forEach((book) => displayNewBook(book));
 }
@@ -132,6 +132,5 @@ function addRemoveButtonListener(removeButton) {
 
 addStatusButtonsListener();
 addSubmitButtonListener();
-addInitialBooks();
 displayInitialBooks();
 addInitialRemoveButtonListener();

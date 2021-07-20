@@ -2,7 +2,8 @@
 :root {
   --color-primary: rgb(255, 255, 255);
   --color-secondary: rgb(245, 245, 245);
-  --color-accent: wheat;
+  --color-accent: rgb(245, 220, 175);
+  --color-text: #000;
   --border-radius: 5px;
 }
 
@@ -19,7 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 5rem 10rem 0 10rem;
   background-color: var(--color-primary);
-  color: black;
+  color: var(--color-text);
 }
 
 header {
@@ -83,13 +84,14 @@ select {
   height: 2rem;
   border: 1px solid lightgray;
   border-radius: var(--border-radius);
+  background-color: var(--color-primary);
 }
 
 .submit-button {
   width: 7rem;
   height: 3rem;
   margin-top: 1rem;
-  background-color: wheat;
+  background-color: var(--color-accent);
   border-radius: var(--border-radius);
   border: none;
   font-size: 1rem;
@@ -101,19 +103,15 @@ select {
   height: 1.5rem;
   border-radius: var(--border-radius);
   border: none;
+  background-color: rgb(220, 220, 220);
 }
 
 #read {
   background-color: var(--color-accent);
 }
 
-#not-read {
-  background-color: lightgray;
-}
-
 h1 {
   font-size: 3rem;
-  color: black;
 }
 
 th {
