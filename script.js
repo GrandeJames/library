@@ -10,11 +10,14 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+addInitialBooks();
+displayBooksInLibrary();
+
 function displayBooksInLibrary() {
-    myLibrary.forEach(book => addTableRow(book));
+    myLibrary.forEach(book => displayNewBook(book));
 }
 
-function addTableRow(book) {
+function displayNewBook(book) {
     const table = document.querySelector("table");
 
     const tableRow = document.createElement("tr");
@@ -34,13 +37,30 @@ function addTableRow(book) {
     table.appendChild(tableRow);
 }
 
-const book1 = new Book("harry potter", "jk rowling idk", 456);
-const book2 = new Book("spirit bear", "idfk author", 146);
-const book3 = new Book("harry potter2", "randomAuthor", 627);
+function addInitialBooks() {
+    const book1 = new Book("Harry Potter", "J. K. Rowling", 336);
+    const book2 = new Book("The Hobbit", "J. R. R. Tolkien", 304);
 
-addBookToLibrary(book1);
-addBookToLibrary(book2);
-addBookToLibrary(book3);
+    addBookToLibrary(book1);
+    addBookToLibrary(book2);
+}
 
-displayBooksInLibrary();
+function addSubmitButtonListener() {
+    const submitButton = document.querySelector(".submit-button");
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+
+    submitButton.addEventListener("click", () => {
+        
+        if (title.value.length && author.value.length && pages.value.length) {
+            const book = new Book(title.value, author.value, pages.value);
+
+            addBookToLibrary(book);
+            displayNewBook(book);
+        }
+    });
+}
+
+addSubmitButtonListener();
 
