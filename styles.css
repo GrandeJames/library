@@ -1,93 +1,92 @@
 /* Layout */
 :root {
-    --color-primary: rgb(255, 255, 255);
-    --color-seconday: rgb(245, 245, 245);
-    --color-accent: wheat;
-    --border-radius: 5px;
+  --color-primary: rgb(255, 255, 255);
+  --color-secondary: rgb(245, 245, 245);
+  --color-accent: wheat;
+  --border-radius: 5px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5rem 10rem 0 10rem;
-    background-color: var(--color-primary);
-    color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5rem 10rem 0 10rem;
+  background-color: var(--color-primary);
+  color: black;
 }
 
 header {
-    height: fit-content;
-    margin: 1rem 0 1rem 0;
+  height: fit-content;
+  margin: 1rem 0 1rem 0;
 }
 
 form,
 table {
-    margin: 1rem 0 1rem 0;
-    background-color: var(--color-seconday);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-
+  margin: 1rem 0 1rem 0;
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vh;
 }
 
 .input-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 label {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 input,
 select {
-    height: 2rem;
-    border: 1px solid lightgray;
-    border-radius: var(--border-radius);
+  height: 2rem;
+  border: 1px solid lightgray;
+  border-radius: var(--border-radius);
 }
 
 .submit-button {
-    width: 7rem;
-    height: 3rem;
-    background-color: wheat;
-    border-radius: var(--border-radius);
-    border: none;
-    font-size: 1rem;
+  width: 7rem;
+  height: 3rem;
+  background-color: wheat;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
 }
 
 .status-buttons {
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: var(--border-radius);
-    border: none;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
 }
 
 #read {
-    background-color: var(--color-accent);
+  background-color: var(--color-accent);
 }
 
 #not-read {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 h1 {
-    font-size: 3rem;
-    color: var(--color-accent);
+  font-size: 3rem;
+  color: var(--color-accent);
 }
 
 th {
-    text-align: left;
+  text-align: left;
 }
