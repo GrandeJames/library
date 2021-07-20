@@ -11,6 +11,7 @@
         </header>
 
         <form>
+            <h2>Add New Book</h2>
             <div class="input-container">
                 <div class="input-section">
                     <label for="title">Title</label><br>
@@ -27,6 +28,13 @@
                     <input type="number" id="pages" name="pages" min="1">
                 </div>
 
+                <div class="input-section">
+                    <label for="status">Status</label><br>
+                    <select id="status" name="status">
+                        <option value="read">Read</option>
+                        <option value="not-read">Not Read</option>
+                    </select>
+                </div>
                 
             </div>
 
@@ -38,6 +46,7 @@
                 <th>Title</th>
                 <th>Author</th>
                 <th>Pages</th>
+                <th>Status</th>
             </tr>
         </table>
         <script src="script.js"></script>
