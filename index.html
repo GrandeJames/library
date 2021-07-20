@@ -11,24 +11,27 @@
     </header>
 
     <form>
-      <h2>Add New Book</h2>
+      <header>
+        <h2>Add New Book</h2>
+      </header>
+
       <div class="input-container">
-        <div class="input-section">
+        <div class="title-section">
           <label for="title">Title</label><br />
           <input type="text" id="title" name="title" />
         </div>
 
-        <div class="input-section">
+        <div class="author-section">
           <label for="author">Author</label><br />
           <input type="text" id="author" name="author" />
         </div>
 
-        <div class="input-section">
+        <div class="pages-section">
           <label for="pages">Pages</label><br />
           <input type="number" id="pages" name="pages" min="1" />
         </div>
 
-        <div class="input-section">
+        <div class="status-section">
           <label for="status">Status</label><br />
           <select id="status" name="status">
             <option value="read">Read</option>
@@ -40,14 +43,20 @@
       <input class="submit-button" type="button" value="Add Book" />
     </form>
 
-    <table>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Pages</th>
-        <th>Status</th>
-      </tr>
-    </table>
+    <section class="table-section">
+      <header>
+        <h2>Books</h2>
+      </header>
+
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Status</th>
+        </tr>
+      </table>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

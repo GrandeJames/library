@@ -28,7 +28,7 @@ header {
 }
 
 form,
-table {
+.table-section {
   margin: 1rem 0 1rem 0;
   background-color: var(--color-secondary);
   padding: 2rem;
@@ -39,12 +39,39 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30vh;
+  height: fit-content;
+}
+
+table {
+  width: 100%;
 }
 
 .input-container {
   display: flex;
   justify-content: space-between;
+}
+
+.title-section {
+  width: 40%;
+}
+
+.author-section {
+  width: 30%;
+}
+
+.pages-section {
+  width: 5%;
+}
+
+.status-section {
+  width: 10%;
+}
+
+#title,
+#author,
+#pages,
+#status {
+  width: 100%;
 }
 
 label {
@@ -61,13 +88,15 @@ select {
 .submit-button {
   width: 7rem;
   height: 3rem;
+  margin-top: 1rem;
   background-color: wheat;
   border-radius: var(--border-radius);
   border: none;
   font-size: 1rem;
 }
 
-.status-buttons {
+.status-buttons,
+.remove-buttons {
   width: 5rem;
   height: 1.5rem;
   border-radius: var(--border-radius);
@@ -84,7 +113,7 @@ select {
 
 h1 {
   font-size: 3rem;
-  color: var(--color-accent);
+  color: black;
 }
 
 th {
