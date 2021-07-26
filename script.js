@@ -1,9 +1,50 @@
+class Library {
+  books = [];
+
+  constructor(books) {
+    this.books = books;
+  }
+
+  get books() {
+    return this.books;
+  }
+}
+
+class Book {
+  title;
+  author;
+  pages;
+  status;
+
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+}
+
+let books = [
+  {
+    title: "Harry Potter",
+    author: "J. K. Rowling",
+    pages: 336,
+    status: false,
+  },
+  {
+    title: "The Hobbit",
+    author: "J. R. R. Tolkien",
+    pages: 304,
+    status: true,
+  },
+];
+
+let myLibrary = new Library(books);
+
 function addStatusButtonsListener() {
   const statusButtons = document.querySelectorAll(".status-buttons");
 
-  statusButtons.forEach((statusButton) =>
-    addStatusButtonListener(statusButton)
-  );
+  statusButtons.forEach(statusButton => addStatusButtonListener(statusButton));
 }
 
 function addStatusButtonListener(statusButton) {
@@ -39,28 +80,6 @@ function addSubmitButtonListener() {
   });
 }
 
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status;
-}
-
-let myLibrary = [
-  {
-    title: "Harry Potter",
-    author: "J. K. Rowling",
-    pages: 336,
-    status: false,
-  },
-  {
-    title: "The Hobbit",
-    author: "J. R. R. Tolkien",
-    pages: 304,
-    status: true,
-  },
-];
-
 function displayNewBook(book) {
   const table = document.querySelector("table");
 
@@ -75,7 +94,7 @@ function displayNewBook(book) {
   const statusButton = document.createElement("button");
   const removeButton = document.createElement("button");
 
-  tableRow.setAttribute("data-index", myLibrary.indexOf(book));
+  tableRow.setAttribute("data-index", myLibrary.books.indexOf(book));
 
   tableData1.textContent = book.title;
   tableData2.textContent = book.author;
@@ -88,7 +107,7 @@ function displayNewBook(book) {
 
   removeButton.type = "button";
   removeButton.className = "remove-buttons";
-  removeButton.setAttribute("data-index", myLibrary.indexOf(book));
+  removeButton.setAttribute("data-index", myLibrary.books.indexOf(book));
   removeButton.textContent = "Remove";
 
   tableData4.appendChild(statusButton);
@@ -107,7 +126,7 @@ function displayNewBook(book) {
 }
 
 function displayInitialBooks() {
-  myLibrary.forEach((book) => displayNewBook(book));
+  myLibrary.books.forEach(book => displayNewBook(book));
 }
 
 function removeTableRow(removeButton) {
@@ -121,7 +140,7 @@ function removeTableRow(removeButton) {
 function addInitialRemoveButtonListener() {
   const removeButtons = document.querySelectorAll(".remove-buttons");
 
-  removeButtons.forEach((removeButton) => {
+  removeButtons.forEach(removeButton => {
     addRemoveButtonListener(removeButton);
   });
 }
