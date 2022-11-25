@@ -4,32 +4,32 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
     <title>Library</title>
+    <script src="script.js" defer></script>
   </head>
+
   <body>
     <header>
       <h1>Library</h1>
     </header>
-
     <form>
       <h2>Add Book</h2>
-
       <div class="input-container">
-        <div class="title-input">
+        <div class="input-title">
           <label for="title">Title</label><br />
           <input type="text" id="title" name="title" />
         </div>
 
-        <div class="author-input">
+        <div class="input-author">
           <label for="author">Author</label><br />
           <input type="text" id="author" name="author" />
         </div>
 
-        <div class="pages-input">
+        <div class="input-pages">
           <label for="pages">Pages</label><br />
           <input type="number" id="pages" name="pages" min="1" />
         </div>
 
-        <div class="status-input">
+        <div class="input-status">
           <label for="status">Status</label><br />
           <select id="status" name="status">
             <option value="read">Read</option>
@@ -37,13 +37,11 @@
           </select>
         </div>
       </div>
-
       <input class="submit-button" type="button" value="Add Book" />
     </form>
 
     <section class="table-section">
       <h2>Books</h2>
-
       <table>
         <tr>
           <th>Title</th>
@@ -53,6 +51,5 @@
         </tr>
       </table>
     </section>
-    <script src="script.js"></script>
   </body>
 </html>
