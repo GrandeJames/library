@@ -9,27 +9,27 @@
 
   <body>
     <header>
-      <h1>Library</h1>
+      <h1>My library</h1>
     </header>
     <form>
       <h2>Add Book</h2>
       <div class="input-container">
-        <div class="input-title">
+        <div class="title-container">
           <label for="title">Title</label><br />
           <input type="text" id="title" name="title" />
         </div>
 
-        <div class="input-author">
+        <div class="author-container">
           <label for="author">Author</label><br />
           <input type="text" id="author" name="author" />
         </div>
 
-        <div class="input-pages">
+        <div class="pages-container">
           <label for="pages">Pages</label><br />
           <input type="number" id="pages" name="pages" min="1" />
         </div>
 
-        <div class="input-status">
+        <div class="status-container">
           <label for="status">Status</label><br />
           <select id="status" name="status">
             <option value="read">Read</option>
@@ -37,10 +37,10 @@
           </select>
         </div>
       </div>
-      <input class="submit-button" type="button" value="Add Book" />
+      <input class="submit-button" type="button" value="Submit" />
     </form>
 
-    <section class="table-section">
+    <section class="books-section">
       <h2>Books</h2>
       <table>
         <tr>

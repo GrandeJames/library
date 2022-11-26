@@ -101,12 +101,12 @@ function displayNewBook(book) {
   tableData3.textContent = book.pages;
 
   statusButton.type = "button";
-  statusButton.className = "status-buttons";
+  statusButton.className = "status-button";
   statusButton.id = book.status ? "read" : "not-read";
-  statusButton.textContent = book.status ? "Read" : "Not Read";
+  statusButton.textContent = book.status ? "Read" : "Not read";
 
   removeButton.type = "button";
-  removeButton.className = "remove-buttons";
+  removeButton.className = "remove-button";
   removeButton.setAttribute("data-index", myLibrary.books.indexOf(book));
   removeButton.textContent = "Remove";
 
