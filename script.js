@@ -41,7 +41,7 @@ let books = [
 
 let myLibrary = new Library(books);
 
-function addStatusButtonListener() {
+function addStatusButtonsListener() {
   const statusButton = document.querySelectorAll(".status-button");
 
   statusButton.forEach(statusButton => addStatusButtonListener(statusButton));
@@ -148,7 +148,7 @@ function addRemoveButtonListener(removeButton) {
   removeButton.addEventListener("click", () => removeTableRow(removeButton));
 }
 
-addStatusButtonListener();
+addStatusButtonsListener();
 addSubmitButtonListener();
 displayInitialBooks();
 addInitialRemoveButtonListener();
