@@ -41,10 +41,10 @@ let books = [
 
 let myLibrary = new Library(books);
 
-function addStatusButtonsListener() {
-  const statusButtons = document.querySelectorAll(".status-buttons");
+function addStatusButtonListener() {
+  const statusButton = document.querySelectorAll(".status-button");
 
-  statusButtons.forEach(statusButton => addStatusButtonListener(statusButton));
+  statusButton.forEach(statusButton => addStatusButtonListener(statusButton));
 }
 
 function addStatusButtonListener(statusButton) {
@@ -74,7 +74,6 @@ function addSubmitButtonListener() {
         pagesInput.value,
         statusInput.value === "read"
       );
-
       displayNewBook(book);
     }
   });
@@ -138,9 +137,9 @@ function removeTableRow(removeButton) {
 }
 
 function addInitialRemoveButtonListener() {
-  const removeButtons = document.querySelectorAll(".remove-buttons");
+  const removeButton = document.querySelectorAll(".remove-button");
 
-  removeButtons.forEach(removeButton => {
+  removeButton.forEach(removeButton => {
     addRemoveButtonListener(removeButton);
   });
 }
@@ -149,7 +148,7 @@ function addRemoveButtonListener(removeButton) {
   removeButton.addEventListener("click", () => removeTableRow(removeButton));
 }
 
-addStatusButtonsListener();
+addStatusButtonListener();
 addSubmitButtonListener();
 displayInitialBooks();
 addInitialRemoveButtonListener();
